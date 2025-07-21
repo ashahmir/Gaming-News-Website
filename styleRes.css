@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: purple;
+    background-color: black;
+    overflow-x: hidden;
+  }
+
+  .outer{
+    background-image: url(../Pictures/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+  }
+  .outer .main{
+    height: 70vh;
+    width: 80vw;
+    margin: 11rem auto;
+    background: #fff;
+    box-shadow: 0 5px 5px rgb(121, 16, 145);
+    overflow: hidden;
+    margin-bottom: 5%;
+    border: 2px solid rgb(208, 0, 255);
+  }
+
+  .outer .main .slides{
+    display: flex;
+    height: 100%;
+    width: 500%;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .outer .main .slides section{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+  .outer .main .slides section .content{
+    display: grid;
+    text-transform: uppercase;
+
+  }
+
+  .outer .main .slides section .content h2{
+    font-size: 3rem;
+    margin-bottom: 1%;
+ }
+ .outer .main .slides section .content h3{
+    font-size: 1.5rem;
+    color: blueviolet;
+    margin-bottom: 1%;
+ }
+
+ .outer .main .slides section .content button {
+    outline: none;
+    border: none;
+    height: 3rem;
+    width: 12rem;
+    background: purple;
+    margin-top: 2rem;
+}
+
+.main .slides section .content button a {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.outer .main .slides section .image{
+    height: 30rem;
+    width: 40rem;
+}
+
+.outer .main .slides section:nth-child(1) .image{
+    background: url(../Pictures/resources/1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.outer .main .slides section:nth-child(2) .image{
+    background: url(../Pictures/resources/2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.outer .main .slides section:nth-child(3) .image{
+    background: url(../Pictures/resources/3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.outer .main .slides section:nth-child(4) .image{
+    background: url(../Pictures/resources/4.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.outer .main .slides section:nth-child(5) .image{
+    background: url(../Pictures/resources/5.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+input{
+    display: none;
+}
+
+.controls{
+    position: absolute;
+    top: 10.5%; 
+    left: 9.6%;
+    display: flex;
+    align-items: center;
+}
+
+.controls label{
+    height: 5rem;
+    width: 10rem;
+    background: #fff;
+    color: blueviolet;
+    font-size: 1.2rem;
+    line-height: 5rem;
+    text-align: center;
+    border-top-right-radius: 2rem;
+    cursor: pointer;
+    border: 2px solid rgb(208, 0, 255);
+    border-bottom: none;
+    margin-bottom: -46%;
+}
+
+.controls label:hover{
+    background: blueviolet;
+    color: #fff;
+}
+
+#r1:checked ~ .outer .main .slides {
+    transform: translateX(0%);
+}
+#r2:checked ~ .outer .main .slides {
+    transform: translateX(-20%);
+}
+#r3:checked ~ .outer .main .slides {
+    transform: translateX(-40%);
+}
+#r4:checked ~ .outer .main .slides {
+    transform: translateX(-60%);
+}
+#r5:checked ~ .outer .main .slides {
+    transform: translateX(-80%);
+}
+
+#r1:checked ~ .controls > label:nth-child(1),
+#r2:checked ~ .controls > label:nth-child(2),
+#r3:checked ~ .controls > label:nth-child(3),
+#r4:checked ~ .controls > label:nth-child(4),
+#r5:checked ~ .controls > label:nth-child(5){
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.image:hover{
+    transform: scale(1.1);
+}
