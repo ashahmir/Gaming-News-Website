@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+  }
+
+  .main{
+    margin: 5%;
+    background-image: url(../Pictures/contactbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%
+    
+  }
+
+  .main h1{
+    padding-top: 13%;
+    text-align: center;
+  }
+  
+  .main h2{
+    text-align: center;
+    padding-top: 2%;
+    font-weight: lighter;
+    padding-bottom: 5%;
+  }
+
+
+  .mid {
+    display: flex;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+
+.form-column, .map-column {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+label{
+    color: black;
+}
+
+
+
+.mid2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  
+    padding: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .mid-item {
+    background-color: rgb(255, 255, 255); 
+    border-radius: 8px;  
+    padding: 20px; 
+    width: 30%;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .mid-item h3 {
+    text-align: center;
+    margin-bottom: 10px;  
+  }
+  
+  .mid-item p {
+    font-size: 16px;  
+    color: #333;  
+    text-align: center;
+  }
+
+  .mid-item img{
+    height: 100px;
+    width: 100px;
+    margin-left: 35%;
+  }
+
+  .mid-item img:hover{
+    transform: rotate(10deg);
+  
+  }
+
+  .item .text {
+    position: absolute;
+    bottom: 20%;
+    left: 45%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 100%;
+}
+
+.item:hover .text {
+    opacity: 1;
+    transform: translate(-50%, 0%);
+}
